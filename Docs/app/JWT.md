@@ -4,7 +4,7 @@ description: When Cloudflare sends a request to your origin, the request will
   include an application token as a Cf-Access-Jwt-Assertion request header.
   Requests made through a browser will also pass the token as a CF_Authorization
   cookie.
-lastUpdated: 2025-10-10T18:46:14.000Z
+lastUpdated: 2026-10-10T18:46:14.000Z
 chatbotDeprioritize: false
 source_url:
   html: https://developers.cloudflare.com/cloudflare-one/identity/authorization-cookie/validating-json/
@@ -29,7 +29,7 @@ As shown in the example below, `https://<your-team-name>.cloudflareaccess.com/cd
 * `public_cert`: current key in PEM format
 * `public_certs`: both keys in PEM format
 
-```txt
+```json
 {
   "keys": [
     {
@@ -418,5 +418,5 @@ app.get("/", (req, res) => {
 });
 
 
-app.listen(3333);
+app.listen(3000);
 ```
