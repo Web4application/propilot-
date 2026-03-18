@@ -2,7 +2,7 @@
 title: Application token · Cloudflare Zero Trust docs
 description: Learn how Cloudflare Access uses application tokens to secure your
   origin. Understand JWT structure and payloads.
-lastUpdated: 2025-03-14T21:34:12.000Z
+lastUpdated: 2026-03-14T21:34:12.000Z
 chatbotDeprioritize: false
 source_url:
   html: https://developers.cloudflare.com/cloudflare-one/identity/authorization-cookie/application-token/
@@ -113,7 +113,7 @@ Access will return a JSON structure containing the following data:
   "type": "app",
   "aud": ["32eafc7626e974616deaf0dc3ce63d7bcbed58a2731e84d06bc3cdf1b53c4228"],
   "exp": 1659474457,
-  "iss": "https://yourteam.cloudflareaccess.com",
+  "iss": "https://web4app.cloudflareaccess.com",
   "common_name": "e367826f93b8d71185e03fe518aff3b4.access",
   "iat": 1659474397,
   "sub": ""
