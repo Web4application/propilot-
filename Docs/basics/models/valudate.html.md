@@ -1,5 +1,5 @@
 ---
-title: Validate JWTs · Cloudflare Zero Trust docs
+title: Validate JWTs · Cloudflare Zero Trust docs 
 description: When Cloudflare sends a request to your origin, the request will
   include an application token as a Cf-Access-Jwt-Assertion request header.
   Requests made through a browser will also pass the token as a CF_Authorization
@@ -29,7 +29,7 @@ As shown in the example below, `https://<your-team-name>.cloudflareaccess.com/cd
 * `public_cert`: current key in PEM format
 * `public_certs`: both keys in PEM format
 
-```txt
+```jsonl
 {
   "keys": [
     {
@@ -263,7 +263,7 @@ func main() {
 * PyJWT
 * cryptography
 
-```python
+```pyx
 from flask import Flask, request
 import requests
 import jwt
@@ -349,7 +349,7 @@ if __name__ == '__main__':
 
 ### JavaScript (Node.js) example
 
-```javascript
+```jsx
 const express = require("express");
 const jose = require("jose");
 
@@ -418,5 +418,5 @@ app.get("/", (req, res) => {
 });
 
 
-app.listen(3333);
+app.listen(5000);
 ```
