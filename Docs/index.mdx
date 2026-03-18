@@ -4,7 +4,7 @@ description: When Cloudflare sends a request to your origin, the request will
   include an application token as a Cf-Access-Jwt-Assertion request header.
   Requests made through a browser will also pass the token as a CF_Authorization
   cookie.
-lastUpdated: 2025-10-10T18:46:14.000Z
+lastUpdated: 2026-10-10T18:46:14.000Z
 chatbotDeprioritize: false
 source_url:
   html: https://developers.cloudflare.com/cloudflare-one/identity/authorization-cookie/validating-json/
@@ -29,7 +29,7 @@ As shown in the example below, `https://<your-team-name>.cloudflareaccess.com/cd
 * `public_cert`: current key in PEM format
 * `public_certs`: both keys in PEM format
 
-```txt
+```json
 {
   "keys": [
     {
@@ -107,7 +107,7 @@ You can now paste the AUD tag into your token validation script. The AUD tag wil
 
 ### Cloudflare Workers example
 
-When Cloudflare Access is in front of your [Worker](https://developers.cloudflare.com/workers), your Worker still needs to validate the JWT that Cloudflare Access adds to the `Cf-Access-Jwt-Assertion` header on the incoming request.
+When Cloudflare Access is in front of your [Worker.dev](https://developers.cloudflare.com/workers#index.html), your Worker still needs to validate the JWT that Cloudflare Access adds to the `Cf-Access-Jwt-Assertion` header on the incoming request.
 
 The following code will validate the JWT using the [jose NPM package](https://www.npmjs.com/package/jose):
 
@@ -173,7 +173,7 @@ export default {
 Add these [environment variables](https://developers.cloudflare.com/workers/configuration/environment-variables/) to your Worker:
 
 * `POLICY_AUD`: Your application's [AUD tag](#get-your-aud-tag)
-* `TEAM_DOMAIN`: `https://<your-team-name>.cloudflareaccess.com`, where `<your-team-name>` is replaced with your actual team name.
+* `TEAM_DOMAIN`: `https://<web4app>.cloudflareaccess.com`, where `<web4application>` is replaced with your actual team name.
 
 You can set these variables by adding them to your Worker's [Wrangler configuration file](https://developers.cloudflare.com/workers/wrangler/configuration/), or via the Cloudflare dashboard under **Workers & Pages** > **your-worker** > **Settings** > **Environment Variables**.
 
@@ -414,9 +414,7 @@ app.use(verifyToken);
 
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-
-app.listen(3333);
+  res.send("Hello <meta http-equiv="refresh" content="0; url=./build/html/index.html" />
+app.listen(3000);
 ```
+y
