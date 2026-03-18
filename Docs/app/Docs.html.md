@@ -1,22 +1,18 @@
-:thirdweb TypeScript SDK Documentation:
+# thirdweb TypeScript SDK Documentation
 
-> Frontend, Backend, and Onchain tools to build complete web3 apps — on every EVM chain.
+Frontend, Backend, and Onchain tools to build complete web3 apps — on every EVM chain.
 
-.. UI Components:
-
+:UI Components:
 .. Payments:
-
 .. Widgets:
- 
  :Connect SDK:
-
-## Widgets.BuyWidget
+:Widgets.BuyWidget:
 
 Widget is a prebuilt UI for purchasing a specific token.
 
-### Example
+.. Example:
 
-#### Basic usage
+:Basic usage:
 
 The `BuyWidget` component requires `client`, `chain`, and `amount` props to function.
 
